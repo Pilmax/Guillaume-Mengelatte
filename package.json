@@ -1,0 +1,19 @@
+{
+  "name": "guillaume-mengelatte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch style.scss:style.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pilmax/Guillaume-Mengelatte.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pilmax/Guillaume-Mengelatte/issues"
+  },
+  "homepage": "https://github.com/Pilmax/Guillaume-Mengelatte#readme"
+}
