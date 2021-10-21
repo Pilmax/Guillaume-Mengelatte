@@ -7,7 +7,7 @@ $dark-blue: #1882E6;
 $white: rgb(235, 235, 235);
 
 
-*{
+*, ::after, ::before{
   padding: 0;
   margin: 0;
   font-family: sans-serif ;
@@ -89,81 +89,106 @@ nav{
     text-transform: uppercase;
   }
 }
+// ************END NAV*************
+
 .home{
    background: $light-bk;
    position: relative;
+   display: grid;
+
    .container{
     display: flex;
-    padding: 50px 0 430px 0;
-
-
-    .left-home{
-      width: 40%;
-      margin: auto 0 auto 10%;
-      display: flex;
-      flex-direction: column;
+    padding: 150px 0 14px 0;
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
   
-      h3{
-        width: 85%;
-        margin-top: 50px;
-      }
-      a{
-        margin: 50px 0;
-        width: fit-content;
-        padding: 25px 51px;
-        letter-spacing: 7px;
-      }
-      .picto{
-        width: 269px;
-        display: flex;
-        justify-content: space-between;
-        img:hover{
-          background: red;
+  }
+
+  .left-home{
+    width: 40%;
+    margin: auto 0 auto 10%;
+    display: flex;
+    flex-direction: column;
+
+    h3{
+      width: 85%;
+      margin-top: 50px;
+    }
+    a{
+      margin: 50px 0;
+      width: fit-content;
+      padding: 25px 51px;
+      letter-spacing: 7px;
+    }
+    .picto{
+      width: 269px;
+      display: flex;
+      justify-content: space-between;
+      .picto-container{
+        padding: 18px;
+        border-radius: 42px;
+        transition: 0.2s ease-in-out;
+        &:hover{
+          background: $blue;
         }
       }
-
-      @media screen and (max-width: 800px) {
-        margin: auto 5px;
+      img{
+        height: 44px;
       }
     }
-    .right-home{
-      width: 40%;
-      margin-left: 10%;
 
-      img{
-        width: 595px;
+    @media screen and (max-width: 800px) {
+      margin: auto 5px;
+    }
+  }
+  .right-home{
+    width: 40%;
+    margin-left: 10%;
+
+    img{
+      width: 595px;
+      height: auto;
+      @media screen and (max-width: 1510px) {
+        width: 395px;
         height: auto;
-        @media screen and (max-width: 1510px) {
-          width: 395px;
+        @media screen and (max-width: 1000px) {
+          width: 195px;
           height: auto;
-          @media screen and (max-width: 1000px) {
-            width: 195px;
-            height: auto;
-          }
         }
-        
       }
-
-      @media screen and (max-width: 1000px) {
-        margin: auto;
-        width: fit-content;
-      }
+      
     }
 
     @media screen and (max-width: 1000px) {
-      display: block;
-      padding: 50px 0 180px 0;
+      margin: auto;
+      width: fit-content;
     }
+  }
 
-   }
-   .wave{
-     width: 100%;
-     height: auto;
-     position: absolute;
-     bottom: 0;
-   }
+  @media screen and (max-width: 1000px) {
+    display: block;
+    padding: 0;
+  }
+
 }
 
+.click-here{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(/Assets/lightWaveBk.svg) no-repeat;
+  background-size: cover;
+  padding: 55px 0;
+  @media screen and (max-width: 1000px) {
+    padding:42px 0 26px 0;
+    @media screen and (max-width: 800px) {
+      padding: 76px 0px 28px 0;
+    }
+  }
+
+}
 // **************** RESPONSIVE ********************
 @media screen and (max-width: 800px) {
   

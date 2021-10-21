@@ -1,4 +1,4 @@
-* {
+*, ::after, ::before {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -88,77 +88,105 @@ nav a:hover {
 .home {
   background: #D4E4FB;
   position: relative;
+  display: grid;
 }
 .home .container {
   display: flex;
-  padding: 50px 0 430px 0;
+  padding: 150px 0 14px 0;
 }
-.home .container .left-home {
+@media screen and (max-width: 800px) {
+  .home .container {
+    display: block;
+  }
+}
+.home .left-home {
   width: 40%;
   margin: auto 0 auto 10%;
   display: flex;
   flex-direction: column;
 }
-.home .container .left-home h3 {
+.home .left-home h3 {
   width: 85%;
   margin-top: 50px;
 }
-.home .container .left-home a {
+.home .left-home a {
   margin: 50px 0;
   width: fit-content;
   padding: 25px 51px;
   letter-spacing: 7px;
 }
-.home .container .left-home .picto {
+.home .left-home .picto {
   width: 269px;
   display: flex;
   justify-content: space-between;
 }
-.home .container .left-home .picto img:hover {
-  background: red;
+.home .left-home .picto .picto-container {
+  padding: 18px;
+  border-radius: 42px;
+  transition: 0.2s ease-in-out;
+}
+.home .left-home .picto .picto-container:hover {
+  background: #5AA4ED;
+}
+.home .left-home .picto img {
+  height: 44px;
 }
 @media screen and (max-width: 800px) {
-  .home .container .left-home {
+  .home .left-home {
     margin: auto 5px;
   }
 }
-.home .container .right-home {
+.home .right-home {
   width: 40%;
   margin-left: 10%;
 }
-.home .container .right-home img {
+.home .right-home img {
   width: 595px;
   height: auto;
 }
 @media screen and (max-width: 1510px) {
-  .home .container .right-home img {
+  .home .right-home img {
     width: 395px;
     height: auto;
   }
 }
 @media screen and (max-width: 1510px) and (max-width: 1000px) {
-  .home .container .right-home img {
+  .home .right-home img {
     width: 195px;
     height: auto;
   }
 }
 @media screen and (max-width: 1000px) {
-  .home .container .right-home {
+  .home .right-home {
     margin: auto;
     width: fit-content;
   }
 }
 @media screen and (max-width: 1000px) {
-  .home .container {
+  .home {
     display: block;
-    padding: 50px 0 180px 0;
+    padding: 0;
   }
 }
-.home .wave {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
+
+.click-here {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(/Assets/lightWaveBk.svg) no-repeat;
+  background-size: cover;
+  padding: 55px 0;
+}
+@media screen and (max-width: 1000px) {
+  .click-here {
+    padding: 42px 0 26px 0;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 800px) {
+  .click-here {
+    padding: 76px 0px 28px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
