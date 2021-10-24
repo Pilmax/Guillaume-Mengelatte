@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: #F4F7FD;
 }
 
 a {
@@ -70,7 +71,11 @@ nav {
   padding: 0 30px;
   border-bottom: solid #1882E6 1px;
   font-weight: bold;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 nav a {
   padding: 20px 10px;
@@ -165,8 +170,12 @@ nav a:hover {
   border-radius: 42px;
   transition: 0.2s ease-in-out;
 }
+.picto .picto-container a {
+  width: fit-content;
+  padding: 0;
+}
 .picto .picto-container:hover {
-  background: #5AA4ED;
+  filter: invert(100%);
 }
 .picto img {
   height: 44px;
@@ -203,6 +212,7 @@ nav a:hover {
 
 .level-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 100px;
@@ -239,16 +249,176 @@ nav a:hover {
 .level img {
   width: 58px;
   height: auto;
+  transition: 0.2s;
+}
+.level img:hover {
+  filter: invert(100%);
 }
 
 .parcours {
   background: #F4F7FD;
-  padding: 100px 0 0 10%;
+  padding: 100px 10% 0 10%;
+  width: 100%;
+}
+.parcours h1 {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.parcours h1 span {
+  letter-spacing: -3px;
+  color: initial;
+}
+.parcours h2 {
+  font-weight: 500;
+}
+.parcours .parcour-section a {
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.parcour-section {
+  padding: 50px 0;
+}
+.parcour-section h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.parcour-left {
+  position: relative;
+  display: flex;
+  border-bottom-right-radius: 150px;
+  flex-direction: column;
+}
+.parcour-left a {
+  width: fit-content;
+  margin: auto;
+}
+
+.parcour-right {
+  text-align: end;
+  position: relative;
+}
+.parcour-right p {
+  width: inherit;
+}
+
+.parcour-1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 52%;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  border-bottom-right-radius: 150px;
+}
+
+.parcour-2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  height: 101%;
+  width: 52%;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid 2px black;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+
+.parcour-3::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  height: 100%;
+  width: 52%;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  border-top: solid 2px black;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 150px;
+}
+
+.parcour-4::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  height: 100%;
+  width: 52%;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-top-left-radius: 150px;
 }
 
 .portfolio {
   background: #D4E4FB;
-  padding: 100px 0 0 10%;
+  padding: 100px 10% 0 10%;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px -2px gray;
+  margin-bottom: 50px;
+}
+.portfolio-container .color {
+  width: 455px;
+  height: 255px;
+  display: flex;
+}
+.portfolio-container .color a {
+  margin: auto;
+}
+.portfolio-container .color1 {
+  background: #C34F5A;
+}
+.portfolio-container .color1 a {
+  color: white;
+  font-size: 64px;
+}
+.portfolio-container .color2 {
+  background: #27213C;
+}
+.portfolio-container .color2 img {
+  width: 184px;
+  height: auto;
+}
+.portfolio-container .color3 {
+  background: #FFFFFF;
+}
+.portfolio-container .color3 img {
+  width: 83px;
+  height: auto;
+}
+.portfolio-container .color4 {
+  background: #AA1414;
+}
+.portfolio-container .color4 img {
+  width: 300px;
+  height: auto;
+}
+
+.portfolio-right, .portfolio-left {
+  width: 50%;
+  margin: auto;
+}
+.portfolio-right p, .portfolio-left p {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.portfolio-right a, .portfolio-left a {
+  margin-top: 20px;
+  float: right;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .contact {
@@ -258,7 +428,15 @@ nav a:hover {
 
 footer {
   background: #1882E6;
-  padding: 100px 0 0 10%;
+  margin-top: 50px;
+  padding: 10px 10%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer img {
+  filter: invert(100%);
 }
 
 /*# sourceMappingURL=style.css.map */

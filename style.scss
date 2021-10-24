@@ -16,6 +16,7 @@ $white: rgb(235, 235, 235);
 }
 html{
   scroll-behavior: smooth;
+  background: $light-bk;
 }
 
 a{
@@ -75,7 +76,11 @@ nav{
   padding: 0 30px;
   border-bottom: solid $dark-blue 1px ;
   font-weight: bold;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #FFFFFF;
   a{
     padding: 20px 10px;
     display: inline-block;
@@ -169,8 +174,13 @@ nav{
     padding: 18px;
     border-radius: 42px;
     transition: 0.2s ease-in-out;
+    a{
+      width: fit-content;
+      padding: 0;
+    }
     &:hover{
-      background: $blue;
+      //background: #A55B12;
+      filter: invert(100%);
     }
   }
   img{
@@ -222,6 +232,7 @@ nav{
 }
 .level-container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 100px;
@@ -261,6 +272,10 @@ nav{
   img {
     width: 58px;
     height: auto;
+    transition: 0.2s;
+    &:hover{
+      filter: invert(100%);
+    }
   }
 
 }
@@ -269,19 +284,169 @@ nav{
 
 .parcours{
   background: $light-bk;
-  padding: 100px 0 0 10%;
+  padding: 100px 10% 0 10%;
+  width: 100%;
 
+  h1{
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    span{
+      letter-spacing: -3px;
+      color: initial;
+    }
+  }
+  h2{
+    font-weight: 500;
+  }
+  .parcour-section{
+    a{
+      z-index: 2;
+      margin-top: 40px;
+    }
+  }
+  
+}
 
+.parcour-section{
+  padding: 50px 0;
+  h1{
+    margin: 0;
+    font-size: 28px;
+  }
+}
+.parcour-left{
+  position: relative;
+  display: flex;
+  border-bottom-right-radius: 150px;
+  flex-direction: column;
+  a{
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+.parcour-right{
+  text-align: end;
+  position: relative;
+  p{
+    width: inherit;
+  }
+
+}
+.parcour-1::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 52%;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  border-bottom-right-radius: 150px;
+}
+.parcour-2::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  height: 101%;
+  width: 52%;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid 2px black;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+.parcour-3::after{
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  height: 100%;
+  width: 52%;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  border-top: solid 2px black;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 150px;
+}
+.parcour-4::before{
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  height: 100%;
+  width: 52%;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-top-left-radius: 150px;
 }
 // *************** END PARCOURS ****************
 // *************** PORTFOLIO ****************
 
 .portfolio{
   background: $dark-bk;
-  padding: 100px 0 0 10%;
-
-
+  padding: 100px 10% 0 10%;
 }
+.portfolio-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px -2px gray;
+  margin-bottom: 50px;
+  .color{
+    width: 455px;
+    height: 255px;
+    display: flex;
+        a{
+      margin: auto;
+    }
+  }
+  .color1{
+    background: #C34F5A;
+    a{
+      color: white;
+      font-size: 64px;
+    }
+  }
+  .color2{
+    background: #27213C;  
+    img{
+      width: 184px;
+      height: auto;
+    }
+  }
+  .color3{
+    background: #FFFFFF;  
+    img{
+      width: 83px;
+      height: auto;
+    }
+  }
+  .color4{
+    background: #AA1414;  
+    img{
+      width: 300px;
+      height: auto;
+    }
+  }
+}
+.portfolio-right, .portfolio-left{
+  width: 50%;
+  margin: auto;
+  p{
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  a{
+    margin-top: 20px;
+    float: right;
+  }
+}
+.wrap-reverse{
+  flex-wrap: wrap-reverse;
+}
+
 // *************** END PORTFOLIO ****************
 // *************** CONTACT ****************
 
@@ -296,8 +461,16 @@ nav{
 
 footer{
   background: $dark-blue;
-  padding: 100px 0 0 10%;
-
+  margin-top: 50px;
+  padding: 10px 10%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img{
+    filter: invert(100%);
+  }
+ 
 
 }
 // *************** END FOOTER ****************

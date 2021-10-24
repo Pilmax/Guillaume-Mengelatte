@@ -15,28 +15,28 @@
             <a>MENGELATTE Guillaume</a>
         </div>
         <div class="nav-button">
-            <a href="#">home</a>
-            <a href="#">à porpos</a>
-            <a href="#">portfolio</a>
-            <a href="#">contact</a>
+            <a href="#home">home</a>
+            <a href="#about">à porpos</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">contact</a>
         </div>
     </nav>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="container">
             <div class="left-home">
                 <h1>Bonjour, je suis développeur <span>Web Front-END</span>.</h1>
                 <h3>Ayant beaucoup d’intérêt pour l’informatique et le monde du numérique en général, j’ai débuté une formation dans le domaine du multimédia et de l'Internet.</h3>
-                <a class="button" href="#">Mes Projets</a>
+                <a class="button" href="#portfolio">Mes Projets</a>
                 <div class="picto">
                     <div class="picto-container">
-                        <img src="/Assets/git.svg" alt="icon GitHub">
+                        <a href="https://github.com/pilmax" target="_blank"><img src="/Assets/git.svg" alt="icon GitHub"></a>
                     </div>
                     <div class="picto-container">
-                        <img src="/Assets/youtube.svg" alt="icon Youtube">
+                        <a href="https://www.youtube.com/channel/UC_GqkJpZypTYZeIW1yucy7Q" target="_blank"><img src="/Assets/youtube.svg" alt="icon Youtube"></a>
                     </div>
                     <div class="picto-container">
-                        <img src="/Assets/linkedin.svg" alt="icon LinkedIn">
+                        <a href="https://www.linkedin.com/in/guillaume-mengelatte-b88394192/" target="_blank"><img src="/Assets/linkedin.svg" alt="icon LinkedIn"></a>
                     </div>                    
                 </div>
             </div>
@@ -45,14 +45,14 @@
             </div>
         </div>
         <div class="click-here">
-            <a href="#">Faire glisser</a>
-            <a href="#"><img src="Assets/arrow.svg" alt="Arrow icon"></a>
+            <a href="#about">Faire glisser</a>
+            <a href="#about"><img src="Assets/arrow.svg" alt="Arrow icon"></a>
         </div>
     </section>
 
 
 
-    <section class="about">
+    <section class="about" id="about">
         <h1><span>--</span> à propos <span>--</span></h1>
         <h3>Mes <span>compétences acquisent</span> au cours de mes années passées dans le domaine :</h3>
         <div class="level-container">
@@ -87,22 +87,23 @@
         </div>
     </section>
 
-    <section class="parcours">
-        <div class="parcour-section">
+    <section class="parcours" id="parcours">
+        <h1><span>--</span> Mon Parcours <span>--</span></h1>
+        <div class="parcour-section parcour-left parcour-1">
             <h1>Stage un mois - developpeur web front-end</h1>
             <h2>Juin 2021 - Campus19</h2>
             <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour l’association Campus19.</p>
             <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
         </div>
 
-        <div class="parcour-section">
+        <div class="parcour-section parcour-right parcour-2">
             <h1>Collaboration semaines - developpeur web front-end</h1>
             <h2>Première année MMI</h2>
             <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour la croix rouge.</p>
             <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
         </div>
 
-        <div class="parcour-section">
+        <div class="parcour-section parcour-left parcour-3">
             <h1>DUT MMI</h1>
             <h2>Septembre 2020 - Juillet 2022</h2>
             <p>DUT des métiers du multimédia et de l’internet  - Bordeaux Montaigne<br>
@@ -111,7 +112,7 @@
             <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
         </div>
 
-        <div class="parcour-section">
+        <div class="parcour-section parcour-right parcour-4">
             <h1>BAC STI2D SIN - MENTION BIEN</h1>
             <h2>Juin 2019</h2>
             <p>Sciences et Technologies de l'Industrie et du Développement Durable option Système d'Information et Numérique</p>
@@ -119,9 +120,11 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio-container">
-            <img src="" alt="">
+            <div class="color color1">
+                <a href="https://wwww.google.com" target="_blank">ROJE</a>
+            </div>
             <div class="portfolio-right">
                 <h2>Roje</h2>
                 <p>Projet scolaire <span>One Page</span> centré sur la conception de <span>filtres photos</span> en <span>Js</span>. Nous étions un <span>groupe de trois</span>, deux designer et <span>un développeur FRONT</span> moi. maquette réalisée en un jour et demis puis développement du site responsive en une journée. Chaque membre du groupe a pensé puis réalisé un filtre en Js chacun. </p>
@@ -129,17 +132,21 @@
             </div>
         </div>
 
-        <div class="portfolio-container">
+        <div class="portfolio-container wrap-reverse">
             <div class="portfolio-left">
                 <h2>Blog Art</h2>
                 <p>Projet en <span>groupe de 6</span> orianté article, BACK (<span>PHP vanilla</span>) et FRONT (<span>html5 vanilla, css3 vanilla plus une feature Js</span>). Projet comprenant l’apprentissage des première notions de php vanilla et utilisation de <span>CRUD</span> par le biais d’un blog. Le BACK n’étant forcément pas suffisant nous avons du mettre en place une maquette et la développer principalement en <span>html et css vanilla</span> tout ca dans une limite de temps de <span>sept jours</span>.</p>
                 <a href="https://www.google.com" class="button" targer="_blank">Voir</a>
             </div>
-            <img src="" alt="">
+            <div class="color color2">
+                <a href="https://www.google.com" targer="_blank"><img src="Assets/blogART.svg" alt="logo les fines gueules"></a>
+            </div>
         </div>
 
         <div class="portfolio-container">
-            <img src="" alt="">
+            <div class="color color3">
+                <a><img src="Assets/C19.svg" alt="logo campus19"></a>
+            </div>
             <div class="portfolio-right">
                 <h2>Campus19</h2>
                 <p>Projet réalisé durant mon stage de première année en DUT MMI a Bordeaux. Stage réalisé dans l’<span>association Campus19</span> destinée à aidé les étudiants dans le besoin.<br> 
@@ -148,17 +155,20 @@
             </div>
         </div>
 
-        <div class="portfolio-container">
+        <div class="portfolio-container wrap-reverse">
             <div class="portfolio-left">
                 <h2>Musé de l’imprimerie</h2>
                 <p><span>Premier projet</span> de groupe réalisé sur le développement et design web. Dans une contrainte de limite de temps qu’était de <span>six jours</span>, nous avons du faire une refonte graphique d’un site web imposé parmis une liste, ici le musé d’imprimerie et de la communication graphique de Lyon. Le projet était réparti sur trois jours de design et <span>trois jours de développement web</span> vanilla <span>HTML, CSS et une librairie Js</span>. Le responsive n’a pas était mis en place.</p>
                 <a href="https://www.google.com" class="button" targer="_blank">Voir</a>
             </div>
-            <img src="" alt="">
+            <div class="color color4">
+                <a href="https://www.google.com" target="_blank"><img src="Assets/Impr.png" alt="musé de l'imprimerie Lyon"></a>
+            </div>
         </div>
+        <div class="bk-bulle">oui</div>
     </section>
     
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-left">
 
             <form action="">
