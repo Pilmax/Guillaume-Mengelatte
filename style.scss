@@ -1,13 +1,15 @@
 // *************** General ****************
 
 $blue : #5AA4ED;
-$light-bk: #D4E4FB;
+$dark-bk: #D4E4FB;
+$light-bk: #F4F7FD;
 $orange: #E8A206;
 $dark-blue: #1882E6;
 $white: rgb(235, 235, 235);
 
 
 *, ::after, ::before{
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: sans-serif ;
@@ -53,6 +55,7 @@ img{
   height: auto;
 }
 .button{
+  display: inline-block;
   background: $blue;
   padding: 10px 30px;
   border-radius: 30px;
@@ -63,6 +66,7 @@ img{
   }
 }
 
+// *************** END General ****************
 // *************** Nav ****************
 
 nav{
@@ -89,10 +93,10 @@ nav{
     text-transform: uppercase;
   }
 }
-// ************END NAV*************
-
+// ************ END NAV *************
+// ************ HOME *************
 .home{
-   background: $light-bk;
+   background: $dark-bk;
    position: relative;
    display: grid;
 
@@ -120,22 +124,6 @@ nav{
       width: fit-content;
       padding: 25px 51px;
       letter-spacing: 7px;
-    }
-    .picto{
-      width: 269px;
-      display: flex;
-      justify-content: space-between;
-      .picto-container{
-        padding: 18px;
-        border-radius: 42px;
-        transition: 0.2s ease-in-out;
-        &:hover{
-          background: $blue;
-        }
-      }
-      img{
-        height: 44px;
-      }
     }
 
     @media screen and (max-width: 800px) {
@@ -172,24 +160,144 @@ nav{
   }
 
 }
+.picto{
+  width: 269px;
+  display: flex;
+  justify-content: space-between;
+
+  .picto-container{
+    padding: 18px;
+    border-radius: 42px;
+    transition: 0.2s ease-in-out;
+    &:hover{
+      background: $blue;
+    }
+  }
+  img{
+    height: 44px;
+  }
+}
 
 .click-here{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(/Assets/lightWaveBk.svg) no-repeat;
+  background: url(/Assets/lightWaveBk3.svg) no-repeat;
   background-size: cover;
-  padding: 55px 0;
-  @media screen and (max-width: 1000px) {
-    padding:42px 0 26px 0;
-    @media screen and (max-width: 800px) {
-      padding: 76px 0px 28px 0;
+  background-position: center;
+  padding: 50px 0 200px;
+  // @media screen and (max-width: 1000px) {
+  //   padding:42px 0 26px 0;
+  //   @media screen and (max-width: 800px) {
+  //     padding: 76px 0px 28px 0;
+  //   }
+  // }
+
+}
+// ************ END HOME *************
+// ************ ABOUT *************
+
+.about{
+  background: $dark-bk;
+  padding: 100px 0 0 10%;
+
+  h1{
+    text-transform: uppercase;
+    span{
+      letter-spacing: -3px;
+      color: initial;
     }
   }
 
-}
-// **************** RESPONSIVE ********************
-@media screen and (max-width: 800px) {
+  h3{
+    margin: 50px 0 50px 25px;
+
+    span{
+      color: $orange;
+      
+    }
+  }
   
 }
+.level-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}
+.level-right, .level-left{
+  width: 400px;
+  h3{
+    margin: 0;
+    padding: 0 10px;
+    background-color: $dark-bk;
+    position: absolute;
+    top: -12px;
+  }
+}
+
+.level-left{
+  h3{
+    left: 8px;
+  }
+}
+
+.level-right{
+  h3{
+    right: 8px;
+  }
+}
+
+.level{
+  border: solid 4px $orange;
+  border-radius: 5px;
+  position: relative;
+  padding: 40px 30px;
+  margin: 0 0 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+
+  img {
+    width: 58px;
+    height: auto;
+  }
+
+}
+// *************** END ABOUT ****************
+// *************** PARCOURS ****************
+
+.parcours{
+  background: $light-bk;
+  padding: 100px 0 0 10%;
+
+
+}
+// *************** END PARCOURS ****************
+// *************** PORTFOLIO ****************
+
+.portfolio{
+  background: $dark-bk;
+  padding: 100px 0 0 10%;
+
+
+}
+// *************** END PORTFOLIO ****************
+// *************** CONTACT ****************
+
+.contact{
+  background: $light-bk;
+  padding: 100px 0 0 10%;
+
+
+}
+// *************** END CONTACT ****************
+// *************** FOOTER ****************
+
+footer{
+  background: $dark-blue;
+  padding: 100px 0 0 10%;
+
+
+}
+// *************** END FOOTER ****************
