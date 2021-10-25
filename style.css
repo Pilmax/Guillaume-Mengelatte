@@ -60,6 +60,7 @@ img {
   border-radius: 30px;
   color: #ebebeb;
   transition: 0.1s ease-in-out;
+  border: none;
 }
 .button:hover {
   background: #1882E6;
@@ -359,6 +360,14 @@ nav a:hover {
   background: #D4E4FB;
   padding: 100px 10% 0 10%;
 }
+.portfolio h1 {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.portfolio h1 span {
+  letter-spacing: -3px;
+  color: initial;
+}
 
 .portfolio-container {
   display: flex;
@@ -423,7 +432,70 @@ nav a:hover {
 
 .contact {
   background: #F4F7FD;
-  padding: 100px 0 0 10%;
+  padding: 100px 10% 0 10%;
+}
+.contact h1 {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.contact h1 span {
+  letter-spacing: -3px;
+  color: initial;
+}
+
+.flex-contact {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-contact .contact-left, .flex-contact .contact-right {
+  margin: 0 auto;
+}
+
+.contact-left {
+  width: 459px;
+}
+.contact-left form {
+  width: 100%;
+}
+.contact-left form .top-part {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-left form .top-part .form-element {
+  width: 45%;
+}
+.contact-left form .form-element {
+  display: flex;
+  flex-direction: column;
+}
+.contact-left form input, .contact-left form textarea {
+  background-color: #D6EAFF;
+  border: none;
+  font-size: 24px;
+  padding: 8px;
+  margin-bottom: 15px;
+  outline: solid 1px #1882E6;
+}
+.contact-left form input:focus, .contact-left form textarea:focus {
+  outline: solid 1px #1882E6;
+  box-shadow: 0 0 7px 1px #1882E6;
+}
+.contact-left form input:valid, .contact-left form textarea:valid {
+  outline: solid 1px rgba(56, 134, 56, 0.5);
+  box-shadow: 0 0 7px 1px #388638;
+}
+.contact-left form textarea {
+  resize: none;
+  height: 259px;
+}
+
+.contact-right .contact-right-container {
+  display: flex;
+}
+.contact-right img {
+  width: 24px;
+  height: auto;
 }
 
 footer {

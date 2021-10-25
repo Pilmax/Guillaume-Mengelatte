@@ -121,6 +121,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
+        <h1><span>--</span> Contact <span>--</span></h1>
         <div class="portfolio-container">
             <div class="color color1">
                 <a href="https://wwww.google.com" target="_blank">ROJE</a>
@@ -169,47 +170,50 @@
     </section>
     
     <section class="contact" id="contact">
-        <div class="contact-left">
+        <h1><span>--</span> Contact <span>--</span></h1>
+        <div class="flex-contact">
+            <div class="contact-left">
 
-            <form action="">
-                <div class="top-part">
-                    <div class="form-element">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email">    
+                <form action="">
+                    <div class="top-part">
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email" required>    
+                        </div>
+                        <div class="form-element">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" placeholder="Nom" required>    
+                        </div>
                     </div>
                     <div class="form-element">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" placeholder="Nom">    
+                        <label for="object">Objet</label>
+                        <input type="text" id="object" placeholder="Object" required>    
                     </div>
+                    <div class="form-element">
+                        <label for="message">Message</label>
+                        <textarea type="text" id="message" placeholder="Message" required></textarea>    
+                    </div>
+                    <button class="button" action="">Envoyer</button>
+                </form>
+            </div>
+    
+            <div class="contact-right">
+    
+                <div class="contact-right-container">
+                    <img src="Assets/mail.svg" alt="icon mail">
+                    <p>guillaumemenelatte@hotmail.fr</p>
                 </div>
-                <div class="form-element">
-                    <label for="object">Objet</label>
-                    <input type="text" id="object" placeholder="Object">    
+                <div class="contact-right-container">
+                    <img src="Assets/mapDot.svg" alt="icon mail">
+                    <p>Bordeaux (33)</p>
                 </div>
-                <div class="form-element">
-                    <label for="message">Message</label>
-                    <textarea type="text" id="message" placeholder="Message"></textarea>    
+                <div class="api-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45246.837975506554!2d-0.6210314029855577!3d44.86377328541969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e8f751ca81%3A0x796386037b397a89!2sBordeaux!5e0!3m2!1sfr!2sfr!4v1635147618627!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
-                <button action="">Envoyer</button>
-            </form>
+            </div>    
         </div>
-
-        <div class="contact-right">
-
-            <div class="contact-right-container">
-                <img src="Assets/mail.svg" alt="icon mail">
-                <p>guillaumemenelatte@hotmail.fr</p>
-            </div>
-            <div class="contact-right-container">
-                <img src="Assets/mapDot.svg" alt="icon mail">
-                <p>Bordeaux (33)</p>
-            </div>
-            <div class="api-maps">
-
-            </div>
-
-        </div>
-
+        
     </section>
     
     <footer>
