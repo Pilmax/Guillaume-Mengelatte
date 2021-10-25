@@ -529,6 +529,9 @@ nav{
     width: 24px;
     height: auto;
   }
+  iframe{
+    outline: solid 2px $dark-blue;
+  }
 }
 // *************** END CONTACT ****************
 // *************** FOOTER ****************
@@ -543,6 +546,7 @@ footer{
   align-items: center;
   img{
     filter: invert(100%);
+    cursor: pointer;
   }
  
 

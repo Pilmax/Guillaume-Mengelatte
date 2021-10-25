@@ -497,6 +497,9 @@ nav a:hover {
   width: 24px;
   height: auto;
 }
+.contact-right iframe {
+  outline: solid 2px #1882E6;
+}
 
 footer {
   background: #1882E6;
@@ -509,6 +512,7 @@ footer {
 }
 footer img {
   filter: invert(100%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
