@@ -187,7 +187,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(/Assets/lightWaveBk3.svg) no-repeat;
+  background: url(Assets/lightWaveBk3.svg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 50px 0 200px;
@@ -195,7 +195,8 @@ nav a:hover {
 
 .about {
   background: #D4E4FB;
-  padding: 100px 0 0 10%;
+  padding: 100px 10% 20% 10%;
+  position: relative;
 }
 .about h1 {
   text-transform: uppercase;
@@ -209,6 +210,17 @@ nav a:hover {
 }
 .about h3 span {
   color: #E8A206;
+}
+.about::after {
+  content: "";
+  background: url(Assets/bkTopParcours.svg) no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  position: absolute;
+  height: 177px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
 }
 
 .level-container {
@@ -258,8 +270,9 @@ nav a:hover {
 
 .parcours {
   background: #F4F7FD;
-  padding: 100px 10% 0 10%;
+  padding: 0 10% 213px 120px;
   width: 100%;
+  position: relative;
 }
 .parcours h1 {
   text-transform: uppercase;
@@ -275,6 +288,17 @@ nav a:hover {
 .parcours .parcour-section a {
   z-index: 2;
   margin-top: 40px;
+}
+.parcours::after {
+  content: "";
+  background: url(Assets/bkTopPortfolio.svg) no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  position: absolute;
+  height: 215px;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
 }
 
 .parcour-section {

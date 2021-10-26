@@ -194,7 +194,7 @@ nav{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(/Assets/lightWaveBk3.svg) no-repeat;
+  background: url(Assets/lightWaveBk3.svg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 50px 0 200px;
@@ -211,8 +211,8 @@ nav{
 
 .about{
   background: $dark-bk;
-  padding: 100px 0 0 10%;
-
+  padding: 100px 10% 20% 10%;
+  position: relative;
   h1{
     text-transform: uppercase;
     span{
@@ -229,7 +229,17 @@ nav{
       
     }
   }
-  
+  &::after{
+    content: "";
+    background: url(Assets/bkTopParcours.svg) no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    position: absolute;
+    height: 177px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  }
 }
 .level-container{
   display: flex;
@@ -285,8 +295,9 @@ nav{
 
 .parcours{
   background: $light-bk;
-  padding: 100px 10% 0 10%;
+  padding: 0 10% 213px 120px;
   width: 100%;
+  position: relative;
 
   h1{
     text-transform: uppercase;
@@ -305,7 +316,17 @@ nav{
       margin-top: 40px;
     }
   }
-  
+  &::after{
+    content: "";
+    background: url(Assets/bkTopPortfolio.svg) no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    position: absolute;
+    height: 215px;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+  }
 }
 
 .parcour-section{
@@ -396,6 +417,7 @@ nav{
       color: initial;
     }
   }
+  
 }
 .portfolio-container{
   display: flex;
