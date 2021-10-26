@@ -446,6 +446,7 @@ nav a:hover {
 .flex-contact {
   margin-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .flex-contact .contact-left, .flex-contact .contact-right {
@@ -475,6 +476,7 @@ nav a:hover {
   font-size: 24px;
   padding: 8px;
   margin-bottom: 15px;
+  width: 100%;
   outline: solid 1px #1882E6;
 }
 .contact-left form input:focus, .contact-left form textarea:focus {
@@ -498,6 +500,7 @@ nav a:hover {
   height: auto;
 }
 .contact-right iframe {
+  width: 100%;
   outline: solid 2px #1882E6;
 }
 

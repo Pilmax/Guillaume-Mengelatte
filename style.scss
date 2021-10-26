@@ -474,6 +474,7 @@ nav{
 .flex-contact{
   margin-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   .contact-left, .contact-right{
     margin: 0 auto;
@@ -500,6 +501,7 @@ nav{
       font-size: 24px;
       padding: 8px;
       margin-bottom: 15px;
+      width: 100%;
       outline: solid 1px $dark-blue;
       &:focus{
         outline: solid 1px $dark-blue;
@@ -530,6 +532,7 @@ nav{
     height: auto;
   }
   iframe{
+    width: 100%;
     outline: solid 2px $dark-blue;
   }
 }
