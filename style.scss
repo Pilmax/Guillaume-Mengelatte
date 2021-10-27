@@ -6,7 +6,7 @@ $light-bk: #F4F7FD;
 $orange: #E8A206;
 $dark-blue: #1882E6;
 $white: rgb(235, 235, 235);
-
+$border: 150px;
 
 *, ::after, ::before{
   box-sizing: border-box;
@@ -74,6 +74,7 @@ img{
 nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 30px;
   border-bottom: solid $dark-blue 1px ;
   font-weight: bold;
@@ -82,6 +83,7 @@ nav{
   z-index: 10;
   width: 100%;
   background-color: #FFFFFF;
+  text-transform: uppercase;
   a{
     padding: 20px 10px;
     display: inline-block;
@@ -109,6 +111,7 @@ nav{
    .container{
     display: flex;
     padding: 150px 0 14px 0;
+    justify-content: space-between;
     @media screen and (max-width: 800px) {
       display: block;
     }
@@ -117,7 +120,7 @@ nav{
 
   .left-home{
     width: 40%;
-    margin: auto 0 auto 10%;
+    margin: auto 0% auto 10%;
     display: flex;
     flex-direction: column;
 
@@ -130,10 +133,17 @@ nav{
       width: fit-content;
       padding: 25px 51px;
       letter-spacing: 7px;
+      @media screen and (max-width: 800px) {
+        margin: 50px auto;
+      }
     }
 
     @media screen and (max-width: 800px) {
-      margin: auto 5px;
+      margin: auto;
+      width: 90%;
+      h3{
+        margin: 50px auto 0 auto;
+      }
     }
   }
   .right-home{
@@ -144,10 +154,11 @@ nav{
       width: 595px;
       height: auto;
       @media screen and (max-width: 1510px) {
-        width: 395px;
+        width: 400px;
         height: auto;
-        @media screen and (max-width: 1000px) {
-          width: 195px;
+        @media screen and (max-width: 800px) {
+          width: 295px;
+          margin-top: 20px;
           height: auto;
         }
       }
@@ -187,6 +198,10 @@ nav{
   img{
     height: 44px;
   }
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .click-here{
@@ -198,6 +213,7 @@ nav{
   background-size: cover;
   background-position: center;
   padding: 50px 0 200px;
+  position: relative;
   // @media screen and (max-width: 1000px) {
   //   padding:42px 0 26px 0;
   //   @media screen and (max-width: 800px) {
@@ -205,6 +221,42 @@ nav{
   //   }
   // }
 
+}
+.ca3-scroll-down-arrow {
+	background-image: url(Assets/arrow.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ca3-scroll-down-link {
+  cursor: pointer;
+  height: 60px;
+  width: 65px;
+  margin: 0px 0 0 -32px;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  color: #FFF;
+  text-decoration: none;
+  animation: ca3_fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes ca3_fade_move_down {
+  0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,20px); opacity: 0; }
+}
+@-moz-keyframes ca3_fade_move_down {
+  0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,20px); opacity: 0; }
+}
+@keyframes ca3_fade_move_down {
+  0%   { transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,20px); opacity: 0; }
 }
 // ************ END HOME *************
 // ************ ABOUT *************
@@ -239,6 +291,15 @@ nav{
     bottom: 0px;
     left: 0;
     right: 0;
+    @media screen and ( max-width: 500px){
+      height: 107px;
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    padding: 100px 20px 30% 20px;
+    h1{
+      text-align: center;
+    }
   }
 }
 .level-container{
@@ -295,7 +356,7 @@ nav{
 
 .parcours{
   background: $light-bk;
-  padding: 0 10% 213px 120px;
+  padding: 0 120px 213px 120px;
   width: 100%;
   position: relative;
 
@@ -326,6 +387,18 @@ nav{
     bottom: 0px;
     left: 0px;
     right: 0;
+    @media screen and ( max-width: 1000px){
+      left: -99px;
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    padding: 0 20px 213px 20px;
+    .parcours-title{
+      text-align: center;
+      @media screen and ( max-width: 450px){
+        font-size: 28px;
+      }
+    }
   }
 }
 
@@ -355,6 +428,18 @@ nav{
   }
 
 }
+.container-parcours{
+  position: relative;
+  .top-arrow{
+    position: absolute;
+    top: -2px;
+    right: -10.4px;
+    background: url(Assets/top-arrow.svg) no-repeat;
+    height: 14px;
+    width: 23px;
+  }
+}
+
 .parcour-1::after{
   content: "";
   position: absolute;
@@ -364,7 +449,11 @@ nav{
   width: 52%;
   border-bottom: solid 2px black;
   border-right: solid 2px black;
-  border-bottom-right-radius: 150px;
+  border-bottom-right-radius: $border;
+  @media screen and (max-width: 1150px) {
+    border-bottom-right-radius: 80px;
+  }
+
 }
 .parcour-2::before{
   content: "";
@@ -376,8 +465,12 @@ nav{
   border-top: solid 2px black;
   border-left: solid 2px black;
   border-bottom: solid 2px black;
-  border-top-left-radius: 150px;
-  border-bottom-left-radius: 150px;
+  border-top-left-radius: $border;
+  border-bottom-left-radius: $border;
+  @media screen and (max-width: 1150px) {
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
 }
 .parcour-3::after{
   content: "";
@@ -389,8 +482,12 @@ nav{
   border-bottom: solid 2px black;
   border-right: solid 2px black;
   border-top: solid 2px black;
-  border-bottom-right-radius: 150px;
-  border-top-right-radius: 150px;
+  border-bottom-right-radius: $border;
+  border-top-right-radius: $border;
+  @media screen and (max-width: 1150px) {
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+  }
 }
 .parcour-4::before{
   content: "";
@@ -401,14 +498,18 @@ nav{
   width: 52%;
   border-top: solid 2px black;
   border-left: solid 2px black;
-  border-top-left-radius: 150px;
+  border-top-left-radius: $border;
+  @media screen and (max-width: 1150px) {
+    border-top-left-radius: 80px;
+  }
 }
 // *************** END PARCOURS ****************
 // *************** PORTFOLIO ****************
 
 .portfolio{
   background: $dark-bk;
-  padding: 100px 10% 0 10%;
+  padding: 100px 10% 30px 10%;
+  position: relative;
   h1{
     text-transform: uppercase;
     margin-bottom: 100px;
@@ -416,8 +517,31 @@ nav{
       letter-spacing: -3px;
       color: initial;
     }
+    @media screen and ( max-width: 400px) {
+      font-size: 34px;  
+    }
   }
-  
+  &::after{
+    content: "";
+    background: url(Assets/bkBottomPortfolio.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 215px;
+    bottom: -207px;
+    left: 0px;
+    right: 0;
+    @media screen and ( max-width: 800px){
+      height: 65px;
+      bottom: -57px;
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    padding: 50px 20px 0 20px;
+    h1{
+      text-align: center;
+    }
+  }
 }
 .portfolio-container{
   display: flex;
@@ -459,6 +583,9 @@ nav{
     img{
       width: 300px;
       height: auto;
+      @media screen and (max-width:800px){      
+        width: 200px;
+      }
     }
   }
 }
@@ -472,8 +599,24 @@ nav{
   a{
     margin-top: 20px;
     float: right;
+    @media screen and ( max-width: 1000px){
+      margin-bottom: 20px;
+    }
+  }
+  h2{
+    @media screen and ( max-width: 1000px){
+      margin-top: 20px;
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    margin-right: 0px;
+    @media screen and ( max-width: 800px){
+      margin: 0;
+      width: 100%;
+    }
   }
 }
+
 .wrap-reverse{
   flex-wrap: wrap-reverse;
 }
@@ -483,13 +626,19 @@ nav{
 
 .contact{
   background: $light-bk;
-  padding: 100px 10% 0 10%;
+  padding: 400px 10% 0 10%;
   h1{
     text-transform: uppercase;
     margin-bottom: 100px;
     span{
       letter-spacing: -3px;
       color: initial;
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    padding: 140px 20px 0 20px;
+    h1{
+      text-align: center;
     }
   }
 }
@@ -500,10 +649,21 @@ nav{
   justify-content: space-between;
   .contact-left, .contact-right{
     margin: 0 auto;
+    width: 40%;
+    @media screen and ( max-width: 1000px){
+      width: 60%;
+      margin-bottom: 20px;
+      @media screen and ( max-width: 600px){
+        width: 100%;
+      }
+    }
+  }
+  @media screen and ( max-width: 1000px){
+    display: block;
   }
 }
 .contact-left{
-  width: 459px;
+  
   form{
     width: 100%;
     .top-part{
@@ -548,10 +708,13 @@ nav{
 .contact-right{
   .contact-right-container{
     display: flex;
+    align-items: center;
+    margin-bottom: 20px;
   }
   img{
     width: 24px;
     height: auto;
+    margin-right: 10px;
   }
   iframe{
     width: 100%;
@@ -564,16 +727,99 @@ nav{
 footer{
   background: $dark-blue;
   margin-top: 50px;
-  padding: 10px 10%;
+  padding: 28px 10%;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  h3{
+    font-weight: 100;
+  }
+  .picto-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  .picto-container-footer{
+    @media screen and (max-width: 1000px) {
+      padding: 5px;
+    }
+  }
   img{
     filter: invert(100%);
     cursor: pointer;
+    width: 38px;
+    height: auto;
+    @media screen and (max-width: 1000px) {
+      width: 30px;
+      margin-top: 20px;
+    }
   }
  
-
+  @media screen and (max-width: 1000px) {
+    display: block;
+    padding: 20px 5%;
+    text-align: center;
+  }
 }
 // *************** END FOOTER ****************
+// *************** BURGER ****************
+
+.menu_button{
+  visibility: hidden;
+  transition: 0s;
+}
+@media screen and (max-width: 800px) {
+  nav{
+      float: right;
+      transition: 0s;
+  }
+  .menu_button{
+      visibility: visible;
+      padding: 10px;
+      width: fit-content;
+      float: right;
+      cursor: pointer;
+      z-index: 4;
+      transition: 0s;
+  }
+  .bar_button{
+      margin: 10px 0;
+      background-color: $dark-blue;
+      width: 45px;
+      height: 4px;
+      transition: 0s;
+  }
+  .nav_a{
+      visibility: hidden;
+      transition: 0s;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      justify-content: space-around;
+      a{
+        transition: 0s;
+        width: 100%;
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+  }
+  .show{
+      //display: block !important;
+      visibility: visible;
+      transition: 0s;
+  }
+} 
+
+
+// *************** END BURGER ****************

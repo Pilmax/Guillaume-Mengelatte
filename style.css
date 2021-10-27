@@ -69,6 +69,7 @@ img {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 30px;
   border-bottom: solid #1882E6 1px;
   font-weight: bold;
@@ -77,6 +78,7 @@ nav {
   z-index: 10;
   width: 100%;
   background-color: #FFFFFF;
+  text-transform: uppercase;
 }
 nav a {
   padding: 20px 10px;
@@ -101,6 +103,7 @@ nav a:hover {
 .home .container {
   display: flex;
   padding: 150px 0 14px 0;
+  justify-content: space-between;
 }
 @media screen and (max-width: 800px) {
   .home .container {
@@ -109,7 +112,7 @@ nav a:hover {
 }
 .home .left-home {
   width: 40%;
-  margin: auto 0 auto 10%;
+  margin: auto 0% auto 10%;
   display: flex;
   flex-direction: column;
 }
@@ -124,8 +127,17 @@ nav a:hover {
   letter-spacing: 7px;
 }
 @media screen and (max-width: 800px) {
+  .home .left-home a {
+    margin: 50px auto;
+  }
+}
+@media screen and (max-width: 800px) {
   .home .left-home {
-    margin: auto 5px;
+    margin: auto;
+    width: 90%;
+  }
+  .home .left-home h3 {
+    margin: 50px auto 0 auto;
   }
 }
 .home .right-home {
@@ -138,13 +150,14 @@ nav a:hover {
 }
 @media screen and (max-width: 1510px) {
   .home .right-home img {
-    width: 395px;
+    width: 400px;
     height: auto;
   }
 }
-@media screen and (max-width: 1510px) and (max-width: 1000px) {
+@media screen and (max-width: 1510px) and (max-width: 800px) {
   .home .right-home img {
-    width: 195px;
+    width: 295px;
+    margin-top: 20px;
     height: auto;
   }
 }
@@ -181,6 +194,12 @@ nav a:hover {
 .picto img {
   height: 44px;
 }
+@media screen and (max-width: 1000px) {
+  .picto {
+    width: 80%;
+    margin: auto;
+  }
+}
 
 .click-here {
   display: flex;
@@ -191,8 +210,68 @@ nav a:hover {
   background-size: cover;
   background-position: center;
   padding: 50px 0 200px;
+  position: relative;
 }
 
+.ca3-scroll-down-arrow {
+  background-image: url(Assets/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ca3-scroll-down-link {
+  cursor: pointer;
+  height: 60px;
+  width: 65px;
+  margin: 0px 0 0 -32px;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  color: #FFF;
+  text-decoration: none;
+  animation: ca3_fade_move_down 2s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes ca3_fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes ca3_fade_move_down {
+  0% {
+    -moz-transform: translate(0, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+@keyframes ca3_fade_move_down {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
 .about {
   background: #D4E4FB;
   padding: 100px 10% 20% 10%;
@@ -221,6 +300,19 @@ nav a:hover {
   bottom: 0px;
   left: 0;
   right: 0;
+}
+@media screen and (max-width: 500px) {
+  .about::after {
+    height: 107px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about {
+    padding: 100px 20px 30% 20px;
+  }
+  .about h1 {
+    text-align: center;
+  }
 }
 
 .level-container {
@@ -270,7 +362,7 @@ nav a:hover {
 
 .parcours {
   background: #F4F7FD;
-  padding: 0 10% 213px 120px;
+  padding: 0 120px 213px 120px;
   width: 100%;
   position: relative;
 }
@@ -300,6 +392,24 @@ nav a:hover {
   left: 0px;
   right: 0;
 }
+@media screen and (max-width: 1000px) {
+  .parcours::after {
+    left: -99px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .parcours {
+    padding: 0 20px 213px 20px;
+  }
+  .parcours .parcours-title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 450px) {
+  .parcours .parcours-title {
+    font-size: 28px;
+  }
+}
 
 .parcour-section {
   padding: 50px 0;
@@ -328,6 +438,18 @@ nav a:hover {
   width: inherit;
 }
 
+.container-parcours {
+  position: relative;
+}
+.container-parcours .top-arrow {
+  position: absolute;
+  top: -2px;
+  right: -10.4px;
+  background: url(Assets/top-arrow.svg) no-repeat;
+  height: 14px;
+  width: 23px;
+}
+
 .parcour-1::after {
   content: "";
   position: absolute;
@@ -338,6 +460,11 @@ nav a:hover {
   border-bottom: solid 2px black;
   border-right: solid 2px black;
   border-bottom-right-radius: 150px;
+}
+@media screen and (max-width: 1150px) {
+  .parcour-1::after {
+    border-bottom-right-radius: 80px;
+  }
 }
 
 .parcour-2::before {
@@ -353,6 +480,12 @@ nav a:hover {
   border-top-left-radius: 150px;
   border-bottom-left-radius: 150px;
 }
+@media screen and (max-width: 1150px) {
+  .parcour-2::before {
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+}
 
 .parcour-3::after {
   content: "";
@@ -367,6 +500,12 @@ nav a:hover {
   border-bottom-right-radius: 150px;
   border-top-right-radius: 150px;
 }
+@media screen and (max-width: 1150px) {
+  .parcour-3::after {
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+}
 
 .parcour-4::before {
   content: "";
@@ -379,10 +518,16 @@ nav a:hover {
   border-left: solid 2px black;
   border-top-left-radius: 150px;
 }
+@media screen and (max-width: 1150px) {
+  .parcour-4::before {
+    border-top-left-radius: 80px;
+  }
+}
 
 .portfolio {
   background: #D4E4FB;
-  padding: 100px 10% 0 10%;
+  padding: 100px 10% 30px 10%;
+  position: relative;
 }
 .portfolio h1 {
   text-transform: uppercase;
@@ -391,6 +536,36 @@ nav a:hover {
 .portfolio h1 span {
   letter-spacing: -3px;
   color: initial;
+}
+@media screen and (max-width: 400px) {
+  .portfolio h1 {
+    font-size: 34px;
+  }
+}
+.portfolio::after {
+  content: "";
+  background: url(Assets/bkBottomPortfolio.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 215px;
+  bottom: -207px;
+  left: 0px;
+  right: 0;
+}
+@media screen and (max-width: 800px) {
+  .portfolio::after {
+    height: 65px;
+    bottom: -57px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .portfolio {
+    padding: 50px 20px 0 20px;
+  }
+  .portfolio h1 {
+    text-align: center;
+  }
 }
 
 .portfolio-container {
@@ -436,6 +611,11 @@ nav a:hover {
   width: 300px;
   height: auto;
 }
+@media screen and (max-width: 800px) {
+  .portfolio-container .color4 img {
+    width: 200px;
+  }
+}
 
 .portfolio-right, .portfolio-left {
   width: 50%;
@@ -449,6 +629,27 @@ nav a:hover {
   margin-top: 20px;
   float: right;
 }
+@media screen and (max-width: 1000px) {
+  .portfolio-right a, .portfolio-left a {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .portfolio-right h2, .portfolio-left h2 {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .portfolio-right, .portfolio-left {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 800px) {
+  .portfolio-right, .portfolio-left {
+    margin: 0;
+    width: 100%;
+  }
+}
 
 .wrap-reverse {
   flex-wrap: wrap-reverse;
@@ -456,7 +657,7 @@ nav a:hover {
 
 .contact {
   background: #F4F7FD;
-  padding: 100px 10% 0 10%;
+  padding: 400px 10% 0 10%;
 }
 .contact h1 {
   text-transform: uppercase;
@@ -465,6 +666,14 @@ nav a:hover {
 .contact h1 span {
   letter-spacing: -3px;
   color: initial;
+}
+@media screen and (max-width: 1000px) {
+  .contact {
+    padding: 140px 20px 0 20px;
+  }
+  .contact h1 {
+    text-align: center;
+  }
 }
 
 .flex-contact {
@@ -475,11 +684,25 @@ nav a:hover {
 }
 .flex-contact .contact-left, .flex-contact .contact-right {
   margin: 0 auto;
+  width: 40%;
+}
+@media screen and (max-width: 1000px) {
+  .flex-contact .contact-left, .flex-contact .contact-right {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 600px) {
+  .flex-contact .contact-left, .flex-contact .contact-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .flex-contact {
+    display: block;
+  }
 }
 
-.contact-left {
-  width: 459px;
-}
 .contact-left form {
   width: 100%;
 }
@@ -518,10 +741,13 @@ nav a:hover {
 
 .contact-right .contact-right-container {
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .contact-right img {
   width: 24px;
   height: auto;
+  margin-right: 10px;
 }
 .contact-right iframe {
   width: 100%;
@@ -531,15 +757,105 @@ nav a:hover {
 footer {
   background: #1882E6;
   margin-top: 50px;
-  padding: 10px 10%;
+  padding: 28px 10%;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+footer h3 {
+  font-weight: 100;
+}
+footer .picto-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+}
+@media screen and (max-width: 1000px) {
+  footer .picto-footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .picto-container-footer {
+    padding: 5px;
+  }
+}
 footer img {
   filter: invert(100%);
   cursor: pointer;
+  width: 38px;
+  height: auto;
+}
+@media screen and (max-width: 1000px) {
+  footer img {
+    width: 30px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer {
+    display: block;
+    padding: 20px 5%;
+    text-align: center;
+  }
+}
+
+.menu_button {
+  visibility: hidden;
+  transition: 0s;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    float: right;
+    transition: 0s;
+  }
+
+  .menu_button {
+    visibility: visible;
+    padding: 10px;
+    width: fit-content;
+    float: right;
+    cursor: pointer;
+    z-index: 4;
+    transition: 0s;
+  }
+
+  .bar_button {
+    margin: 10px 0;
+    background-color: #1882E6;
+    width: 45px;
+    height: 4px;
+    transition: 0s;
+  }
+
+  .nav_a {
+    visibility: hidden;
+    transition: 0s;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    justify-content: space-around;
+  }
+  .nav_a a {
+    transition: 0s;
+    width: 100%;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .show {
+    visibility: visible;
+    transition: 0s;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

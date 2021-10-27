@@ -10,11 +10,16 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav_burger">
         <div class="gm-home">
             <a>MENGELATTE Guillaume</a>
         </div>
-        <div class="nav-button">
+        <div class="nav-button menu_button">
+            <div class="bar_button"></div>
+            <div class="bar_button"></div>
+            <div class="bar_button"></div>
+        </div>
+        <div class="nav_a">
             <a href="#home">home</a>
             <a href="#about">à porpos</a>
             <a href="#portfolio">portfolio</a>
@@ -41,12 +46,12 @@
                 </div>
             </div>
             <div class="right-home">
-                <img src="assets/me.png" alt="profil picture">
+                <img src="Assets/me.png" alt="profil picture">
             </div>
         </div>
         <div class="click-here">
-            <a href="#about">Faire glisser</a>
-            <a href="#about"><img src="Assets/arrow.svg" alt="Arrow icon"></a>
+            <a href="#about">Scroll</a>
+            <a href="#about" class="ca3-scroll-down-link ca3-scroll-down-arrow"></a>
         </div>
     </section>
 
@@ -88,36 +93,40 @@
     </section>
 
     <section class="parcours" id="parcours">
-        <h1><span>--</span> Mon Parcours <span>--</span></h1>
-        <div class="parcour-section parcour-left parcour-1">
-            <h1>Stage un mois - developpeur web front-end</h1>
-            <h2>Juin 2021 - Campus19</h2>
-            <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour l’association Campus19.</p>
-            <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
+        <h1 class="parcours-title"><span>--</span> Mon Parcours <span>--</span></h1>
+        <div class="container-parcours">
+            <div class="top-arrow"></div>
+            <div class="parcour-section parcour-left parcour-1">
+                <h1>Stage un mois - developpeur web front-end</h1>
+                <h2>Juin 2021 - Campus19</h2>
+                <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour l’association Campus19.</p>
+                <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
+            </div>
+    
+            <div class="parcour-section parcour-right parcour-2">
+                <h1>Collaboration semaines - developpeur web front-end</h1>
+                <h2>Première année MMI</h2>
+                <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour la croix rouge.</p>
+                <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
+            </div>
+    
+            <div class="parcour-section parcour-left parcour-3">
+                <h1>DUT MMI</h1>
+                <h2>Septembre 2020 - Juillet 2022</h2>
+                <p>DUT des métiers du multimédia et de l’internet  - Bordeaux Montaigne<br>
+                    Réalisation de divers projets de groupe mélangeants une multitude de métiers du web tel que développeur web FRONT-END .
+                </p>
+                <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
+            </div>
+    
+            <div class="parcour-section parcour-right parcour-4">
+                <h1>BAC STI2D SIN - MENTION BIEN</h1>
+                <h2>Juin 2019</h2>
+                <p>Sciences et Technologies de l'Industrie et du Développement Durable option Système d'Information et Numérique</p>
+                <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
+            </div>
         </div>
-
-        <div class="parcour-section parcour-right parcour-2">
-            <h1>Collaboration semaines - developpeur web front-end</h1>
-            <h2>Première année MMI</h2>
-            <p>Stage de première année de DUT MMI réalisé entant que développeur web FRONT-END pour la croix rouge.</p>
-            <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
-        </div>
-
-        <div class="parcour-section parcour-left parcour-3">
-            <h1>DUT MMI</h1>
-            <h2>Septembre 2020 - Juillet 2022</h2>
-            <p>DUT des métiers du multimédia et de l’internet  - Bordeaux Montaigne<br>
-                Réalisation de divers projets de groupe mélangeants une multitude de métiers du web tel que développeur web FRONT-END .
-            </p>
-            <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
-        </div>
-
-        <div class="parcour-section parcour-right parcour-4">
-            <h1>BAC STI2D SIN - MENTION BIEN</h1>
-            <h2>Juin 2019</h2>
-            <p>Sciences et Technologies de l'Industrie et du Développement Durable option Système d'Information et Numérique</p>
-            <a href="https://www.google.com" target="_blank" class="button">Plus d'info</a>
-        </div>
+        
     </section>
 
     <section class="portfolio" id="portfolio">
@@ -166,7 +175,6 @@
                 <a href="https://pilmax.github.io/Impr/" target="_blank"><img src="Assets/Impr.png" alt="musé de l'imprimerie Lyon"></a>
             </div>
         </div>
-        <div class="bk-bulle">oui</div>
     </section>
     
     <section class="contact" id="contact">
@@ -174,26 +182,26 @@
         <div class="flex-contact">
             <div class="contact-left">
 
-                <form action="">
+                <form action="mail.php" method="POST">
                     <div class="top-part">
                         <div class="form-element">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Email" required>    
+                            <input type="email" id="email" name="email" placeholder="Email" required>    
                         </div>
                         <div class="form-element">
                             <label for="name">Nom</label>
-                            <input type="text" id="name" placeholder="Nom" required>    
+                            <input type="text" id="name" name="name" placeholder="Nom" required>    
                         </div>
                     </div>
                     <div class="form-element">
                         <label for="object">Objet</label>
-                        <input type="text" id="object" placeholder="Object" required>    
+                        <input type="text" id="object" name="object" placeholder="Object" required>    
                     </div>
                     <div class="form-element">
                         <label for="message">Message</label>
-                        <textarea type="text" id="message" placeholder="Message" required></textarea>    
+                        <textarea type="text" id="message" name="message" placeholder="Message" required></textarea>    
                     </div>
-                    <button class="button" action="">Envoyer</button>
+                    <button class="button" type="submit">Envoyer</button>
                 </form>
             </div>
     
@@ -218,8 +226,8 @@
     
     <footer>
         <h3>Guillaume MENGELATTE  © 2021</h3>
-        <div class="picto">
-            <div class="picto-container">
+        <div class="picto-footer">
+            <div class="picto-container-footer">
                 <img src="Assets/git.svg" alt="icon GitHub">
             </div>
             <div class="picto-container">
