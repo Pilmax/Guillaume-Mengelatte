@@ -123,6 +123,7 @@ nav a:hover {
 .home .left-home a {
   margin: 50px 0;
   width: fit-content;
+  width: -moz-fit-content;
   padding: 25px 51px;
   letter-spacing: 7px;
 }
