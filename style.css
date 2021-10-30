@@ -26,7 +26,7 @@ a:active {
 }
 
 p {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -379,9 +379,6 @@ nav a:hover {
 .parcours h2 {
   font-weight: 500;
 }
-.parcours p {
-  font-weight: 400;
-}
 .parcours .parcour-section a {
   z-index: 2;
   margin-top: 40px;
@@ -623,7 +620,6 @@ nav a:hover {
   margin: auto;
 }
 .portfolio-right p, .portfolio-left p {
-  font-weight: 600;
   margin-top: 20px;
 }
 .portfolio-right a, .portfolio-left a {
