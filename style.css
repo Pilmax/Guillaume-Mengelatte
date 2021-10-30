@@ -179,21 +179,18 @@ nav a:hover {
   width: 269px;
   display: flex;
   justify-content: space-between;
-}
-.picto .picto-container {
-  padding: 18px;
-  border-radius: 42px;
   transition: 0.2s ease-in-out;
 }
-.picto .picto-container a {
+.picto a {
   width: fit-content;
-  padding: 0;
-}
-.picto .picto-container:hover {
-  filter: invert(100%);
+  padding: 18px !important;
 }
 .picto img {
   height: 44px;
+  transition: 0.2s ease-in-out;
+}
+.picto img:hover {
+  filter: invert(100%);
 }
 @media screen and (max-width: 1000px) {
   .picto {
@@ -774,20 +771,24 @@ footer .picto-footer {
   width: 300px;
 }
 @media screen and (max-width: 1000px) {
+  footer .picto-footer a {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 1000px) {
   footer .picto-footer {
     width: 100%;
   }
 }
-@media screen and (max-width: 1000px) {
-  footer .picto-container-footer {
-    padding: 5px;
-  }
-}
 footer img {
-  filter: invert(100%);
   cursor: pointer;
   width: 38px;
   height: auto;
+  filter: invert(100%);
+  transition: 0.2s ease-in-out;
+}
+footer img:hover {
+  filter: invert(0%);
 }
 @media screen and (max-width: 1000px) {
   footer img {

@@ -182,22 +182,18 @@ nav{
   width: 269px;
   display: flex;
   justify-content: space-between;
+  transition: 0.2s ease-in-out;
 
-  .picto-container{
-    padding: 18px;
-    border-radius: 42px;
-    transition: 0.2s ease-in-out;
-    a{
-      width: fit-content;
-      padding: 0;
-    }
-    &:hover{
-      //background: #A55B12;
-      filter: invert(100%);
-    }
+  a{
+    width: fit-content;
+    padding: 18px !important;
   }
   img{
     height: 44px;
+    transition: 0.2s ease-in-out;
+    &:hover{
+      filter: invert(100%);
+    }
   }
   @media screen and (max-width: 1000px) {
     width: 80%;
@@ -741,20 +737,25 @@ footer{
     justify-content: space-evenly;
     align-items: center;
     width: 300px;
+    a{
+      @media screen and (max-width: 1000px) {
+        padding: 5px;
+      }
+    }
     @media screen and (max-width: 1000px) {
       width: 100%;
     }
   }
-  .picto-container-footer{
-    @media screen and (max-width: 1000px) {
-      padding: 5px;
-    }
-  }
+
   img{
-    filter: invert(100%);
     cursor: pointer;
     width: 38px;
     height: auto;
+    filter: invert(100%);
+    transition: 0.2s ease-in-out;
+    &:hover{
+      filter: invert(0%);
+    }
     @media screen and (max-width: 1000px) {
       width: 30px;
       margin-top: 20px;
