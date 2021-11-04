@@ -261,14 +261,34 @@ nav{
   background: $dark-bk;
   padding: 100px 10% 20% 10%;
   position: relative;
-  h1{
-    text-transform: uppercase;
-    span{
-      letter-spacing: -10px;
-      color: initial;
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h1{
+      text-transform: uppercase;
+      span{
+        letter-spacing: -10px;
+        color: initial;
+      }
+    }
+    a{
+      height: fit-content;
+      height: -moz-fit-content;
+      width: fit-content;
+      width: -moz-fit-content;
+      letter-spacing: 2px;
+      font-size: 27px;
+    }
+    @media screen and (max-width:1000px){
+      flex-direction: column;
+      align-items: center;
+      a{
+        margin-top: 20px;
+      }
     }
   }
-
   h3{
     margin: 50px 0 50px 25px;
 
@@ -365,6 +385,7 @@ nav{
     span{
       letter-spacing: -10px;
       color: initial;
+      margin-right: 5px;
     }
   }
   h2{
@@ -630,7 +651,7 @@ nav{
     }
   }
   @media screen and ( max-width: 1000px){
-    padding: 140px 20px 0 20px;
+    padding: 180px 20px 0 20px;
     h1{
       text-align: center;
     }

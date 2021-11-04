@@ -276,12 +276,34 @@ nav a:hover {
   padding: 100px 10% 20% 10%;
   position: relative;
 }
-.about h1 {
+.about .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about .flex h1 {
   text-transform: uppercase;
 }
-.about h1 span {
+.about .flex h1 span {
   letter-spacing: -10px;
   color: initial;
+}
+.about .flex a {
+  height: fit-content;
+  height: -moz-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  letter-spacing: 2px;
+  font-size: 27px;
+}
+@media screen and (max-width: 1000px) {
+  .about .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .flex a {
+    margin-top: 20px;
+  }
 }
 .about h3 {
   margin: 50px 0 50px 25px;
@@ -375,6 +397,7 @@ nav a:hover {
 .parcours h1 span {
   letter-spacing: -10px;
   color: initial;
+  margin-right: 5px;
 }
 .parcours h2 {
   font-weight: 500;
@@ -666,7 +689,7 @@ nav a:hover {
 }
 @media screen and (max-width: 1000px) {
   .contact {
-    padding: 140px 20px 0 20px;
+    padding: 180px 20px 0 20px;
   }
   .contact h1 {
     text-align: center;
