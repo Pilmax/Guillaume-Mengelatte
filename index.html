@@ -8,6 +8,7 @@
     <title>Guillaume Mengelatte</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Assets/favicon.ico" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         </div>
         <div class="nav_a">
             <a class="burger_content" href="#home">home</a>
-            <a class="burger_content" href="#about">à porpos</a>
+            <a class="burger_content" href="#about">à propos</a>
             <a class="burger_content" href="#portfolio">portfolio</a>
             <a class="burger_content" href="#contact">contact</a>
         </div>
@@ -58,7 +59,7 @@
             <a href="cv.pdf" target="_blank" class="button">CV</a>
         </div>
 
-        <h3>Mes <span>compétences acquisent</span> au cours de mes années passées dans le domaine :</h3>
+        <h3>Mes <span>compétences acquises</span> au cours de mes années passées dans le domaine :</h3>
         <div class="level-container">
             <div class="level-left">
                 <div class="level">
@@ -166,7 +167,7 @@
 
         <div class="portfolio-container wrap-reverse">
             <div class="portfolio-left">
-                <h2>Musé de l’imprimerie</h2>
+                <h2>Musée de l’imprimerie</h2>
                 <p><span>Premier projet</span> de groupe réalisé sur le développement et design web. Dans une contrainte de limite de temps qu’était de <span>six jours</span>, nous avons dû faire une refonte graphique d’un site web imposé parmi une liste, ici le musée d’imprimerie et de la communication graphique de Lyon. Le projet était réparti sur trois jours de design et <span>trois jours de développement web</span> vanilla <span>HTML, CSS et une librairie Js</span>. Le responsive n’a pas été mis en place.</p>
                 <a href="https://pilmax.github.io/Impr/" class="button" target="_blank">Voir</a>
             </div>
@@ -201,6 +202,7 @@
                         <textarea type="text" id="message" name="message" placeholder="Message" required></textarea>    
                     </div>
                     <button class="button" type="submit">Envoyer</button>
+		    <div class="g-recaptcha" data-sitekey="6LdgFAoeAAAAAGyc0ymrL6j18pjkdDPZLXa3Tkza"></div>
                 </form>
             </div>
     
@@ -234,6 +236,7 @@
     
     <script src="package.json" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
 </body>
 
 </html>

@@ -13,4 +13,5 @@
     $mailheader = "De $email \r\n";
     mail($recipient, $subject, $formcontent, $mailheader) or die("Erreur!");
     echo "Merci!";
+    echo '<h2>Thanks for posting comment</h2>';
 ?>
