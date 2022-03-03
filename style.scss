@@ -594,6 +594,9 @@ nav{
       height: auto;
     }
   }
+  .color3Bis{
+    background-color: black;
+  }
   .color4{
     background: #AA1414;  
     img{
@@ -614,9 +617,9 @@ nav{
   a{
     margin-top: 20px;
     float: right;
-    @media screen and ( max-width: 1000px){
-      margin-bottom: 20px;
-    }
+    // @media screen and ( max-width: 1000px){
+      margin-bottom: 10px;
+    // }
   }
   h2{
     @media screen and ( max-width: 1000px){

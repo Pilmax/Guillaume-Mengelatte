@@ -625,6 +625,9 @@ nav a:hover {
   width: 83px;
   height: auto;
 }
+.portfolio-container .color3Bis {
+  background-color: black;
+}
 .portfolio-container .color4 {
   background: #AA1414;
 }
@@ -648,11 +651,7 @@ nav a:hover {
 .portfolio-right a, .portfolio-left a {
   margin-top: 20px;
   float: right;
-}
-@media screen and (max-width: 1000px) {
-  .portfolio-right a, .portfolio-left a {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1000px) {
   .portfolio-right h2, .portfolio-left h2 {
