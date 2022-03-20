@@ -214,8 +214,8 @@
                         <label for="message">Message</label>
                         <textarea type="text" id="message" name="message" placeholder="Message" required></textarea>    
                     </div>
-                    <button class="button" type="submit">Envoyer</button>
-		    <div class="g-recaptcha" data-sitekey="6LdgFAoeAAAAAGyc0ymrL6j18pjkdDPZLXa3Tkza"></div>
+		            <div class="g-recaptcha" data-sitekey="6LdgFAoeAAAAAGyc0ymrL6j18pjkdDPZLXa3Tkza" required></div>
+                    <button class="button" id="submitButton" type="submit">Envoyer</button>
                 </form>
             </div>
     
@@ -249,7 +249,7 @@
     
     <script src="package.json" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>
-    <script type="text/javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
